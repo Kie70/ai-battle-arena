@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 思辨竞技场 (AI Battle Arena) ⚔️
 
-## Getting Started
+一款基于大语言模型（Kimi & DeepSeek）的沉浸式 AI 辩论对战游戏。
 
-First, run the development server:
+![Banner](assets/screenshot.png)
 
+## 🌟 核心亮点
+
+- **双 AI 巅峰对决**：Kimi 与 DeepSeek 实时交锋，逻辑与修辞的碰撞。
+- **沉浸式体验**：专属打字音效、背景音乐，以及动态血条和伤害判定。
+- **真实思考逻辑**：AI 在发言前会进行内心思考（总结、吐槽、互动等），字数严格控制。
+- **自由缩放**：战斗记录窗口支持自由拉伸，适配不同阅读习惯。
+- **线性流程**：确保文字完全浮现后再进行判定，节奏感拉满。
+
+## 🚀 快速开始
+
+### 1. 获取代码
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/您的用户名/ai-battle-arena.git
+cd ai-battle-arena
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. 安装依赖
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. 运行程序
+你可以直接双击根目录下的 `run_arena.bat`，输入你的 `MOONSHOT_API_KEY` 即可启动。
+或者手动创建 `.env.local` 文件：
+```env
+MOONSHOT_API_KEY=你的密钥
+```
+然后运行：
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📸 如何添加截图
 
-## Learn More
+1. **截图**：运行程序后，使用快捷键（如 `Win + Shift + S`）截取游戏画面。
+2. **保存**：在项目根目录下创建一个 `assets` 文件夹，将截图命名为 `screenshot.png` 放入其中。
+3. **更新 README**：README 中已经预留了图片引用代码 `![Banner](assets/screenshot.png)`，只要文件路径正确即可显示。
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ 技术栈
+- **框架**: Next.js 14 (App Router)
+- **状态管理**: Zustand
+- **样式**: Tailwind CSS
+- **AI 模型**: Moonshot (Kimi) & DeepSeek
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 开源协议
+MIT License

@@ -10,7 +10,9 @@ export interface HPState {
 export interface JudgeResult {
   damage: number;
   isCritical: boolean;
+  isOffTopic?: boolean;
   critReason?: string;
+  offTopicReason?: string;
   logicScore: number;
   rhetoricScore: number;
   counterScore: number;
@@ -27,6 +29,7 @@ export interface DebateLogEntry {
   content: string;
   damage?: number;
   isCritical?: boolean;
+  isOffTopic?: boolean;
   commentary?: string;
 }
 
@@ -34,6 +37,7 @@ export interface CurrentState {
   proHP: number;
   conHP: number;
   combo: number;
+  totalScore?: number;
 }
 
 export interface HistoryEntry {
@@ -44,15 +48,18 @@ export interface HistoryEntry {
 export interface DebateRequestBody {
   topic: string;
   round: number;
-  userChoice: AttackType;
+  userChoice: AttackType | string;
   currentState: CurrentState;
   history: HistoryEntry[];
+  userSide?: 'pro' | 'con';
+  phase?: 'full' | 'kimi_only' | 'deepseek_only';
 }
 
 export interface DebateResponseKimiOrDeepSeek {
   content: string;
   damage: number;
   isCritical: boolean;
+  isOffTopic?: boolean;
   currentHP: HPState;
   totalScore: number;
   comboCount: number;
